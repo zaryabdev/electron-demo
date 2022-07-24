@@ -7,3 +7,13 @@ contextBridge.exposeInMainWorld('versions', {
     ping: () => ipcRenderer.invoke('ping'),
 
 });
+
+contextBridge.exposeInMainWorld('data', {
+    name: () => 'Zaryab'
+
+});
+
+contextBridge.exposeInMainWorld('electronAPI', {
+    setTitle: (title) => ipcRenderer.send('set-title', title),
+    openFile: () => ipcRenderer.invoke('dialog:openFile')
+});
