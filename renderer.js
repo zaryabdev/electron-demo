@@ -7,8 +7,12 @@ btn.addEventListener('click', () => {
     // const title = titleInput.value;
     // window.electronAPI.setTitle(title);
 
-    const filePath = await window.electronAPI.openFile();
-    filePathElement.innerText = filePath;
+    // const filePath = await window.electronAPI.openFile();
+    // filePathElement.innerText = filePath;
+    console.log(electronAPI.createTable());
+
+
+
 });
 
 info.innerText = `

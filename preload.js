@@ -6,6 +6,7 @@ contextBridge.exposeInMainWorld('versions', {
     electron: () => process.versions.electron,
     ping: () => ipcRenderer.invoke('ping'),
 
+
 });
 
 contextBridge.exposeInMainWorld('data', {
@@ -15,5 +16,6 @@ contextBridge.exposeInMainWorld('data', {
 
 contextBridge.exposeInMainWorld('electronAPI', {
     setTitle: (title) => ipcRenderer.send('set-title', title),
-    openFile: () => ipcRenderer.invoke('dialog:openFile')
+    openFile: () => ipcRenderer.invoke('dialog:openFile'),
+    createTable: () => ipcRenderer.invoke('create-table')
 });

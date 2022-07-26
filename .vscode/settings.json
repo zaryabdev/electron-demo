@@ -3,5 +3,20 @@
     "activityBar.background": "#2C2A46",
     "titleBar.activeBackground": "#3D3B63"
     // "titleBar.activeForeground": "#FBFBFC"
+  },
+  "editor.formatOnSave": true,
+  "editor.fontFamily": "'JetBrains Mono','Source Code Pro Medium', Consolas, 'Courier New', monospace",
+  "files.exclude": {
+    "**/.git": true, // this is a default value
+    "**/.DS_Store": true, // this is a default value
+
+    "**/node_modules": true, // this excludes all folders
+    // named "node_modules" from
+    // the explore tree
+
+    // alternative version
+    "node_modules": true // this excludes the folder
+    // only from the root of
+    // your workspace
   }
 }
