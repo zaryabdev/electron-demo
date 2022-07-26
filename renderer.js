@@ -1,4 +1,5 @@
 const info = document.getElementById('info');
+const data = document.getElementById('data');
 const btn = document.getElementById('btn');
 // const titleInput = document.getElementById('title');
 const filePathElement = document.getElementById('filePath');
@@ -9,9 +10,9 @@ btn.addEventListener('click', () => {
 
     // const filePath = await window.electronAPI.openFile();
     // filePathElement.innerText = filePath;
-    console.log(electronAPI.createTable());
-
-
+    const res = electronAPI.createTable();
+    console.log(res);
+    data.innerText = `${res}`;
 
 });
 
